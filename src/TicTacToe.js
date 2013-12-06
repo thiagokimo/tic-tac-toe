@@ -1,6 +1,7 @@
 function TicTacToe() {
 
   var board = ["","","","","","","","",""];
+  var markCount = 0;
   var winner = undefined;
   var currentPlayer = "x";
 
@@ -11,6 +12,7 @@ function TicTacToe() {
   this.mark = function (position) {
     if(board[position] !== "x" && board[position] !== "o") {
       board[position] = currentPlayer;
+      markCount = markCount + 1;
       changeCurrentPlayer();
       calculateWinner();
     }
@@ -30,6 +32,13 @@ function TicTacToe() {
     } else {
       currentPlayer = "x";
     }
+  };
+
+  this.restartGame = function () {
+    board = ["","","","","","","","",""];
+    markCount = 0;
+    winner = undefined;
+    currentPlayer = "x";
   };
 
   function calculateWinner () {
@@ -57,6 +66,10 @@ function TicTacToe() {
       winner = board[0];
     } else if ( (board[2] === board[4] && board[4] === board[6]) && (board[2] !== "" && board[4] !== "" && board[6] !== "") ) {
       winner = board[2];
+    } else {
+      if (markCount === 9) {
+        winner = "draw";
+      }
     }
   };
 };

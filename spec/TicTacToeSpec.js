@@ -1,4 +1,4 @@
-describe("TicTacToe", function () {
+describe("Tic Tac Toe", function () {
 
   it("should have a board", function () {
     var game = new TicTacToe();
