@@ -1,6 +1,7 @@
 <!doctype html>
-<html ng-app="TicTacToe">
+<html lang="en" ng-app="TicTacToe">
   <head>
+    <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
 
     <link rel="stylesheet" href="css/reset.css">
@@ -13,19 +14,19 @@
         <table class="game-tables">
           <tbody>
             <tr>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 0)" ng-mouseleave="hideHoverPlayer($event, 0)" ng-click="set($event, 0)"></td>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 1)" ng-mouseleave="hideHoverPlayer($event, 1)" ng-click="set($event, 1)"></td>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 2)" ng-mouseleave="hideHoverPlayer($event, 2)" ng-click="set($event, 2)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 0)" ng-mouseleave="hideHoverPlayer($event, 0)" ng-click="set($event, 0)">&nbsp;</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 1)" ng-mouseleave="hideHoverPlayer($event, 1)" ng-click="set($event, 1)">&nbsp;</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 2)" ng-mouseleave="hideHoverPlayer($event, 2)" ng-click="set($event, 2)">&nbsp;</td>
             </tr>
             <tr>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 3)" ng-mouseleave="hideHoverPlayer($event, 3)" ng-click="set($event, 3)"></td>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 4)" ng-mouseleave="hideHoverPlayer($event, 4)" ng-click="set($event, 4)"></td>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 5)" ng-mouseleave="hideHoverPlayer($event, 5)" ng-click="set($event, 5)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 3)" ng-mouseleave="hideHoverPlayer($event, 3)" ng-click="set($event, 3)">&nbsp;</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 4)" ng-mouseleave="hideHoverPlayer($event, 4)" ng-click="set($event, 4)">&nbsp;</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 5)" ng-mouseleave="hideHoverPlayer($event, 5)" ng-click="set($event, 5)">&nbsp;</td>
             </tr>
             <tr>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 6)" ng-mouseleave="hideHoverPlayer($event, 6)" ng-click="set($event, 6)"></td>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 7)" ng-mouseleave="hideHoverPlayer($event, 7)" ng-click="set($event, 7)"></td>
-              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 8)" ng-mouseleave="hideHoverPlayer($event, 8)" ng-click="set($event, 8)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 6)" ng-mouseleave="hideHoverPlayer($event, 6)" ng-click="set($event, 6)">&nbsp;</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 7)" ng-mouseleave="hideHoverPlayer($event, 7)" ng-click="set($event, 7)">&nbsp;</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 8)" ng-mouseleave="hideHoverPlayer($event, 8)" ng-click="set($event, 8)">&nbsp;</td>
             </tr>
           </tbody>
         </table>

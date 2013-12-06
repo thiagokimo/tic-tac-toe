@@ -28,15 +28,16 @@ app.controller("TicTacToeCtrl", function ($scope) {
   };
 
   $scope.showHoverPlayer = function(e, pos) {
-    var elem = angular.element(e.srcElement);
+    var elem = angular.element(e.target);
+    console.log(elem);
 
-    if(elem.text() === "") {
+    if(elem.text() === "\xa0") {
       elem.text($scope.getCurrentPlayer());
     }
   };
 
   $scope.hideHoverPlayer = function(e, pos) {
-    var elem = angular.element(e.srcElement);
+    var elem = angular.element(e.target);
     elem.text($scope.board[pos]);
   };
 
@@ -47,7 +48,7 @@ app.controller("TicTacToeCtrl", function ($scope) {
   function buildUnicodeBoard(array) {
     var unicodeBoard = [];
 
-    console.log(array);
+    // console.log(array);
 
     array.forEach(function(elem) {
       if(elem === "x")
@@ -55,7 +56,7 @@ app.controller("TicTacToeCtrl", function ($scope) {
       else if(elem === "o")
         unicodeBoard.push("\u25CB");
       else
-        unicodeBoard.push("");
+        unicodeBoard.push("\xa0");
     });
     return unicodeBoard;
   }
