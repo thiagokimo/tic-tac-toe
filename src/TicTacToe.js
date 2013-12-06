@@ -2,18 +2,34 @@ function TicTacToe() {
 
   var board = ["","","","","","","","",""];
   var winner = undefined;
+  var currentPlayer = "x";
 
   this.getBoard = function() {
     return board;
   };
 
-  this.mark = function (content, position) {
-    board[position] = content;
-    calculateWinner();
+  this.mark = function (position) {
+    if(board[position] !== "x" && board[position] !== "o") {
+      board[position] = currentPlayer;
+      changeCurrentPlayer();
+      calculateWinner();
+    }
   };
 
   this.getWinner = function () {
     return winner;
+  };
+
+  this.getCurrentPlayer = function () {
+    return currentPlayer;
+  };
+
+  function changeCurrentPlayer() {
+    if (currentPlayer === "x") {
+      currentPlayer = "o";
+    } else {
+      currentPlayer = "x";
+    }
   };
 
   function calculateWinner () {
