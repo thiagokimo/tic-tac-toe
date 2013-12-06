@@ -1,39 +1,43 @@
 <!doctype html>
-<html>
+<html ng-app="TicTacToe">
   <head>
     <title>Tic Tac Toe</title>
 
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body ng-controller="TicTacToeCtrl">
 
     <div class="container">
       <div class="jumbotron">
-        <h1>Tic Tac Toe</h1>
-        <p>Yet another implementation of Tic Tac Toe driven by tests. I used AngularJS to display the game and Jasmine for testing.</p>
+        <h1>Tic Tac Toe Driven Development</h1>
+        <p>Learning Jasmine syntax. Lorem ipsum dolor sit amet, consectetur</p>
         <p><a class="btn btn-lg btn-primary" href="SpecRunner.html">Run the specs yourself!</a></p>
       </div>
 
-      <div class="row">
+      <div class="col-md-4">
         <table class="table table-bordered">
           <tbody>
             <tr>
-              <td>x</td>
-              <td>x</td>
-              <td>x</td>
+              <td ng-click="set(0)">{{board[0]}}</td>
+              <td ng-click="set(1)">{{board[1]}}</td>
+              <td ng-click="set(2)">{{board[2]}}</td>
             </tr>
             <tr>
-              <td>o</td>
-              <td>o</td>
-              <td>o</td>
+              <td ng-click="set(3)">{{board[3]}}</td>
+              <td ng-click="set(4)">{{board[4]}}</td>
+              <td ng-click="set(5)">{{board[5]}}</td>
             </tr>
             <tr>
-              <td>o</td>
-              <td>o</td>
-              <td>o</td>
+              <td ng-click="set(6)">{{board[6]}}</td>
+              <td ng-click="set(7)">{{board[7]}}</td>
+              <td ng-click="set(8)">{{board[8]}}</td>
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default" ng-click="restart()">Restart</button>
       </div>
     </div>
 
@@ -43,5 +47,8 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script src="src/app.js"></script>
+    <script src="src/TicTacToe.js"></script>
   </body>
 </html>
