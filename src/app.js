@@ -9,7 +9,7 @@ app.controller("TicTacToeCtrl", function ($scope) {
 
   $scope.set = function (e, position) {
     if(!game.getWinner()){
-      angular.element(e.srcElement).removeClass("can-hover");
+      angular.element(e.target).removeClass("can-hover");
       game.mark(position);
       $scope.board = buildUnicodeBoard(game.getBoard());
     }
