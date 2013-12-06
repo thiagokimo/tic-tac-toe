@@ -3,51 +3,42 @@
   <head>
     <title>Tic Tac Toe</title>
 
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body ng-controller="TicTacToeCtrl">
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Tic Tac Toe Driven Development</h1>
-        <p>Learning Jasmine syntax. Lorem ipsum dolor sit amet, consectetur</p>
-        <p><a class="btn btn-lg btn-primary" href="SpecRunner.html">Run the specs yourself!</a></p>
-      </div>
-
-      <div class="col-md-4">
-        <table class="table table-bordered">
+      <div class="table-wrapper">
+        <table class="game-tables">
           <tbody>
             <tr>
-              <td ng-click="set(0)">{{board[0]}}</td>
-              <td ng-click="set(1)">{{board[1]}}</td>
-              <td ng-click="set(2)">{{board[2]}}</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 0)" ng-mouseleave="hideHoverPlayer($event, 0)" ng-click="set($event, 0)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 1)" ng-mouseleave="hideHoverPlayer($event, 1)" ng-click="set($event, 1)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 2)" ng-mouseleave="hideHoverPlayer($event, 2)" ng-click="set($event, 2)"></td>
             </tr>
             <tr>
-              <td ng-click="set(3)">{{board[3]}}</td>
-              <td ng-click="set(4)">{{board[4]}}</td>
-              <td ng-click="set(5)">{{board[5]}}</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 3)" ng-mouseleave="hideHoverPlayer($event, 3)" ng-click="set($event, 3)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 4)" ng-mouseleave="hideHoverPlayer($event, 4)" ng-click="set($event, 4)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 5)" ng-mouseleave="hideHoverPlayer($event, 5)" ng-click="set($event, 5)"></td>
             </tr>
             <tr>
-              <td ng-click="set(6)">{{board[6]}}</td>
-              <td ng-click="set(7)">{{board[7]}}</td>
-              <td ng-click="set(8)">{{board[8]}}</td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 6)" ng-mouseleave="hideHoverPlayer($event, 6)" ng-click="set($event, 6)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 7)" ng-mouseleave="hideHoverPlayer($event, 7)" ng-click="set($event, 7)"></td>
+              <td class="game-table-cell can-hover" ng-mouseover="showHoverPlayer($event, 8)" ng-mouseleave="hideHoverPlayer($event, 8)" ng-click="set($event, 8)"></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="col-md-4">
+<!--       <div class="col-md-2">
+        <span class="alert-success" ng-if="!getWinner()">Current Player: {{getCurrentPlayer()}}</span>
+        <span class="alert-success" ng-if="getWinner()">Winner: {{getWinner()}}</span>
         <button type="button" class="btn btn-default" ng-click="restart()">Restart</button>
-      </div>
+      </div> -->
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
     <script src="src/app.js"></script>
     <script src="src/TicTacToe.js"></script>
   </body>
