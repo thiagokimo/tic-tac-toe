@@ -10,7 +10,7 @@ function TicTacToe() {
   };
 
   this.mark = function (position) {
-    if(board[position] !== "x" && board[position] !== "o") {
+    if(board[position] === "") {
       board[position] = currentPlayer;
       markCount = markCount + 1;
       changeCurrentPlayer();

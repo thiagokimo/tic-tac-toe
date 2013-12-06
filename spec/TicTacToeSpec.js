@@ -22,14 +22,6 @@ describe("Tic Tac Toe", function () {
 
       expect(game.getBoard()[5]).toEqual("x");
     });
-
-    it("should not override a marked position in the board", function () {
-      var game = new TicTacToe();
-      game.mark(5);
-      game.mark(5);
-
-      expect(game.getBoard()[5]).toEqual("x");
-    });
   });
 
   describe("#winner", function () {
